@@ -10,7 +10,7 @@ timer: src/timer.vhd test/timer_t.vhd
 
 uart_client: src/uart.vhd src/timer.vhd src/uart_client.vhd test/uart_client_t.vhd
 	ghdl -a $^
-	ghdl -r UartClient_t --vcd=$(OUTPUT)
+	ghdl -r UartClient_t --wave=$(OUTPUT).ghw
 
 clean:
-	rm -f output *.cf
+	rm -f output *.cf *.ghw

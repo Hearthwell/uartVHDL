@@ -24,7 +24,7 @@ begin
 
     process is
     begin
-        wait for 4 * DELAY;
+        wait for 100 * DELAY;
 
         assert 1 = 0 report "ALL TEST PASSED" severity failure;
     end process;
